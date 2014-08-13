@@ -1,5 +1,5 @@
 %h1.text-center
-	{{data.postId}} - {{data.post.title}}
+	{{data.postId}} - {{data.postData.posts[data.postId].title }}
 
 .row
-	%p {{data.post.contents}}
+	%p {{data.postData.posts[data.postId].contents }}
