@@ -1,0 +1,5 @@
+%h1.text-center My blog
+.row{:"ng-repeat" => "post in data.posts"}
+	%h2 
+		%a{:"ng-click" => "viewPost($index)"} {{post.title}}
+	%p {{post.contents}}
