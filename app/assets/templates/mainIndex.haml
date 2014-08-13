@@ -1,5 +1,15 @@
-%h1.text-center My blog
-.row{:"ng-repeat" => "post in data.posts"}
-	%h2 
-		%a{:"ng-click" => "viewPost($index)"} {{post.title}}
-	%p {{post.contents}}
+.navbar.navbar-fixed-top
+	.navbar-inner
+		%a.brand{:href => "#"} My blog
+		%ul.nav.pull-right
+			%li
+				%a{:"ng-click" => "navNewPost()"} New Post
+
+
+.container{style: "margin-top: 40px"}
+
+	%h1.text-center My blog
+	.row{:"ng-repeat" => "post in data.posts"}
+		%h2 
+			%a{:"ng-click" => "viewPost($index)"} {{post.title}}
+		%p {{post.contents}}
