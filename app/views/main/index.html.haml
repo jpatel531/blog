@@ -1,5 +1,1 @@
-.container{:"ng-controller" => "IndexCtrl"}
-	%h1.text-center My Blog
-	.row{:"ng-repeat" => "post in data.posts"}
-		%h2 {{post.title}}
-		%p {{post.contents}}
+.container{:"ng-view" => true}
